@@ -55,7 +55,7 @@ function PayPalSubscriptionButton({ amount, currency, intent, onSuccess, onError
         },
         createSubscription: function(data: any, actions: any) {
           return actions.subscription.create({
-            'plan_id': 'P-YOUR_PLAN_ID', // This should be configured in PayPal
+            'plan_id': import.meta.env.VITE_PAYPAL_PLAN_ID, // This should be configured in PayPal
             'application_context': {
               'brand_name': 'BarberApp Calendar',
               'user_action': 'SUBSCRIBE_NOW'
